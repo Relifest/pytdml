@@ -18,7 +18,7 @@ print("Number of training samples: " + str(training_dataset.amount_of_training_d
 print("Number of classes: " + str(training_dataset.number_of_classes))
 
 # Prepare the training dataset
-class_map = pytdml.ml.creat_class_map(training_dataset)  # create class map
+class_map = pytdml.ml.create_class_map(training_dataset)  # create class map
 test = class_to_index(class_map)
 train_set, val_set, test_set = pytdml.ml.split_train_valid_test(training_dataset, 0.7, 0.2, 0.1)  # split dataset
 train_dataset = pytdml.ml.TorchEOImageSegmentationTD(  # create Torch train dataset

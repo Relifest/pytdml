@@ -19,7 +19,7 @@ max_epoch = 10
 lr_epoch = (60, 90, 160)
 
 # Prepare the training dataset
-class_map = pytdml.ml.creat_class_map(training_dataset)  # create class map
+class_map = pytdml.ml.create_class_map(training_dataset)  # create class map
 train_dataset = pytdml.ml.TorchEOImageObjectTD(  # create Torch train dataset
     training_dataset.data,
     class_map,
