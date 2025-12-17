@@ -197,3 +197,10 @@ class EOTrainingDataset(TrainingDataset):
     def from_dict(json_dict):
         new_dict = copy.deepcopy(json_dict)
         return EOTrainingDataset(**new_dict)
+
+
+# Resolve forward references for pydantic v2
+AI_TrainingData.model_rebuild()
+TrainingDataset.model_rebuild()
+AI_EOTrainingData.model_rebuild()
+EOTrainingDataset.model_rebuild()

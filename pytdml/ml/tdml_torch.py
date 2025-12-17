@@ -326,11 +326,11 @@ class Torch3DModelReconstructionTD(VisionDataset):
     def __init__(self, tdml, root, transform=None):
         super().__init__(root)
         self.root = root
+        self.tdml = tdml
+        self.transform = transform
         self.cams, self.depths, self.images = (
             self._load_data()
         )  # Load camera parameters
-        self.tdml = tdml
-        self.transform = transform
 
     def _load_data(self):
         cams_dir = os.path.join(self.root, self.tdml.name, "Cams")
