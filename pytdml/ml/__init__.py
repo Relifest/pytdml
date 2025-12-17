@@ -34,6 +34,12 @@ from pytdml.ml.tdml_torch import (
     TorchEOImageSceneTD,
     TorchEOImageObjectTD,
     TorchEOImageSegmentationTD,
+    TorchSceneClassificationTD,
+    TorchObjectDetectionTD,
+    TorchSemanticSegmentationTD,
+    TorchChangeDetectionTD,
+    TorchStereoTD,
+    Torch3DModelReconstructionTD,
 )
 from pytdml.ml.tdml_tensorflow import (
     TensorflowEOImageSceneTD,
